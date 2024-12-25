@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人展示页面</title>
+    <!-- 引入 CDN 资源 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Your Name</div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#portfolio">作品</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首屏区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Phyllisra</h1>
+            <p data-aos="fade-up" data-aos-delay="200">钱从四面八方来</p>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-aos="fade-up">关于我</h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="assets/images/profile/profile.jpg" alt="Phyllisra">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <p>希望点满技能点的设计院在逃人员</p>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <i class="fas fa-city"></i>
+                            <span>城市设计</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>产业分析</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>活动策划</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-video"></i>
+                            <span>视频剪辑</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>super学习能力</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 data-aos="fade-up" class="section-title">作品展示</h2>
+            <div class="portfolio-filters" data-aos="fade-up">
+                <button class="filter-btn" data-filter="analysis">分析图</button>
+                <button class="filter-btn" data-filter="rendering">效果图</button>
+                <button class="filter-btn" data-filter="logo">标识设计</button>
+                <button class="filter-btn" data-filter="portfolio">作品集</button>
+            </div>
+            <div class="portfolio-carousel" data-aos="fade-up" data-aos-delay="200">
+                <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- 作品项目将通过 JavaScript 动态添加 -->
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">联系我</h2>
+            <div class="contact-content" data-aos="fade-up">
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> your.email@example.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- 引入 JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
+mkdir -p assets/images/analysis
+mkdir -p assets/images/rendering
+mkdir -p assets/images/logo
+mkdir -p portfolio
+# 复制分析图
+copy "G:\Cursor test\images1\*" "assets\images\analysis\"
+# 复制效果图
+copy "G:\Cursor test\images2\*" "assets\images\rendering\"
+# 复制标识设计图
+copy "G:\Cursor test\images3\*" "assets\images\logo\"
+# 复制作品集PDF
+copy "G:\Cursor test\portfolio\个人作品集郑祎旋.pdf" "portfolio\"
+
